@@ -1,1 +1,1 @@
-wget https://www.dropbox.com/s/ttlfiqrc0v0wzi4/pikabu_comments.csv?dl=1
+https://www.dropbox.com/s/dvsvsbxw0fz611l/july2017.csv?dl=1

@@ -1,4 +1,3 @@
-%%writefile csv2txt.py
 import getopt
 import sys
 import pandas as pd
@@ -40,11 +39,11 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv,"hi:o:s:",["ifile=","ofile=","chunksize="])
     except getopt.GetoptError:
-        print('csv2txt.py -i <inputfile> -o <outputfile>')
+        print('dialogue_extractor.py -i <inputfile> -o <outputfile>')
         sys.exit(2)	
     for opt, arg in opts:
         if opt == '-h':
-            print('csv2txt.py -i <inputfile> -o <outputfile> :: --chunksize <chunksize>')
+            print('dialogue_extractor.py -i <inputfile> -o <outputfile> :: --chunksize <chunksize>')
             sys.exit()
         elif opt in ("-i", "--ifile"):
             inputfile = arg
@@ -54,11 +53,11 @@ def main(argv):
             chunksize = int(arg)
 
     if not inputfile or not outputfile:
-        print('csv2txt.py -i <inputfile> -o <outputfile> :: --chunksize <chunksize>')
+        print('dialogue_extractor.py -i <inputfile> -o <outputfile> :: --chunksize <chunksize>')
         sys.exit(2)
 
 
-    print('csv2txt.py -i %s -o %s --chunksize %d' % (inputfile, outputfile, chunksize))
+    print('dialogue_extractor.py -i %s -o %s --chunksize %d' % (inputfile, outputfile, chunksize))
 
     # Processing	
     names = ['id', 'parent_id', 'content']
