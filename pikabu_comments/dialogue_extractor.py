@@ -23,7 +23,7 @@ def process(data, fileout):
                 q = q.values[0]
                 a = row.get('content')
                 try:                  
-                    fo.write(u'%s%s===\n' % (q, a))
+                    fo.write(u'%s\n%s\n===\n' % (q, a))
                 except TypeError:
                     pass
 
@@ -34,16 +34,16 @@ def process(data, fileout):
 def main(argv):
     inputfile = None
     outputfile = None
-    chunksize = 10 ** 9  # default value	
+    chunksize = 10 ** 9  # default value    
 
     try:
         opts, args = getopt.getopt(argv,"hi:o:s:",["ifile=","ofile=","chunksize="])
     except getopt.GetoptError:
-        print('dialogue_extractor.py -i <inputfile> -o <outputfile>')
-        sys.exit(2)	
+        print('csv2txt.py -i <inputfile> -o <outputfile>')
+        sys.exit(2) 
     for opt, arg in opts:
         if opt == '-h':
-            print('dialogue_extractor.py -i <inputfile> -o <outputfile> :: --chunksize <chunksize>')
+            print('csv2txt.py -i <inputfile> -o <outputfile> :: --chunksize <chunksize>')
             sys.exit()
         elif opt in ("-i", "--ifile"):
             inputfile = arg
@@ -53,13 +53,13 @@ def main(argv):
             chunksize = int(arg)
 
     if not inputfile or not outputfile:
-        print('dialogue_extractor.py -i <inputfile> -o <outputfile> :: --chunksize <chunksize>')
+        print('csv2txt.py -i <inputfile> -o <outputfile> :: --chunksize <chunksize>')
         sys.exit(2)
 
 
-    print('dialogue_extractor.py -i %s -o %s --chunksize %d' % (inputfile, outputfile, chunksize))
+    print('csv2txt.py -i %s -o %s --chunksize %d' % (inputfile, outputfile, chunksize))
 
-    # Processing	
+    # Processing    
     names = ['id', 'parent_id', 'content']
     for chunk in pd.read_csv(inputfile, header=None, names=names, chunksize=chunksize):
         process(chunk, outputfile)
@@ -67,3 +67,4 @@ def main(argv):
 
 if __name__ == "__main__":
    main(sys.argv[1:])
+   

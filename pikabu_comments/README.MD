@@ -1,7 +1,7 @@
 # Pikabu Comments Corpus
 
 
-> This corpus contains a collection of 6 million of pulicly available comments on pikabu.ru. 
+> This corpus contains a collection of 6 million of publicly available comments on pikabu.ru. 
 
 
 ## Data Description
