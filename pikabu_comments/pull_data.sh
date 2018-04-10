@@ -1,0 +1,1 @@
+wget https://www.dropbox.com/s/ttlfiqrc0v0wzi4/pikabu_comments.csv?dl=1
