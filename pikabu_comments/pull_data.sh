@@ -1,1 +1,1 @@
-https://www.dropbox.com/s/dvsvsbxw0fz611l/july2017.csv?dl=1
+wget -O ./july2017.csv https://www.dropbox.com/s/dvsvsbxw0fz611l/july2017.csv?dl=1
