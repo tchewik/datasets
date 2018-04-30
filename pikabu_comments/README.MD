@@ -37,3 +37,9 @@ by running **dialogue\_extractor.py**
 ```bash
 ./dialogue_extractor.py -i <inputfile>.csv -o <outputfile>.txt
 ```
+
+or download the .txt file with all the exchanges where every line contains >=7 symbols by running **pull\_qa.sh**
+
+```bash
+./pull\_qa.sh
+```
